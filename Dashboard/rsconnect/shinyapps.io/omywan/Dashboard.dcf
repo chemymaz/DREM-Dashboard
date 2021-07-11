@@ -1,0 +1,13 @@
+name: Dashboard
+title: Dashboard
+username:
+account: omywan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4372802
+bundleId: 4807193
+url: https://omywan.shinyapps.io/Dashboard/
+when: 1625956778.76246
+lastSyncTime: 1625956778.76248
+asMultiple: FALSE
+asStatic: FALSE
