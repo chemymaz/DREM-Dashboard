@@ -1,8 +1,10 @@
 ## ui.R ##
 library(shinydashboard)
 
-dashboardPage(
+dashboardPage(skin = "red",
     dashboardHeader(title = "Dashboard basicón de la DREM",
+                    titleWidth = 320,
+                    
     dropdownMenu(type = "messages",
                  messageItem(
                      from = "Sub direción de energía",
@@ -36,7 +38,7 @@ dashboardPage(
                      icon = icon("exclamation-triangle"),
                      status = "warning"
                  )
-    ),
+            ),
     dropdownMenu(type = "tasks", badgeStatus = "success",
                  taskItem(value = 90, color = "green",
                           "Documentación"
@@ -50,7 +52,7 @@ dashboardPage(
                  taskItem(value = 80, color = "red",
                           "Ejecución presupestal"
                  )
-    )
+            )
     ),
     
     ## Sidebar content
@@ -78,8 +80,14 @@ dashboardPage(
             
             # Second tab content
             tabItem(tabName = "widgets",
-                    h2("Contenido del tab: Widgets")
+                    h2("Contenido del tab: Widgets"),
+                   
+                    box(leafletOutput("mymap"),
+                            p(),
+                            actionButton("recalc", "New points"))
+                        
+                    )
+                    
             )
         )
     )
-)
