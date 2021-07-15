@@ -8,13 +8,13 @@ server <- function(input, output) {
         })
         
     points <- eventReactive(input$recalc, {
-            cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
+            cbind(rnorm(40) * 0.25 - 76.2, rnorm(40)*0.3 -9.55)
         }, ignoreNULL = FALSE)
         
     output$mymap <- renderLeaflet({
             leaflet() %>%
-                addProviderTiles(providers$Stamen.TonerLite,
-                                 options = providerTileOptions(noWrap = TRUE)
+                addProviderTiles(providers$Stamen.TonerBackground,
+                                 options = providerTileOptions(noWrap =TRUE )
                 ) %>%
                 addMarkers(data = points())    
     })
