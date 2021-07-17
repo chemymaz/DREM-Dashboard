@@ -1,7 +1,10 @@
 ## ui.R ##
+library(shiny)
 library(shinydashboard)
+library(leaflet)
 
-dashboardPage(skin = "red",
+
+dashboardPage(skin = "blue",
     dashboardHeader(title = "Dashboard basicón de la DREM",
                     titleWidth = 320,
                     
